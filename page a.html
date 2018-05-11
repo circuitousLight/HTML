@@ -1,0 +1,258 @@
+<!-- 
+-----------------------------NOTES on SYNTAX-new topics at top
+unordered lists=<ul></ul> this designates beginning and end of a bulleted list
+ list-items=<li></li> holds each item in a list
+  -ex.	<ul>
+		 <li>item1</li>
+		 <li>item2</li>
+		 <li>item3</li>  
+		</ul>
+ordered lists=<ol></ol> automatically numbers list items
+  -ex. see above, format is exactly the same as unordered lists
+
+
+
+tables=<table></table>
+ :border attribute
+	-creates a border around and between all rows+columns <table border="1">
+		-adjusting numerical value will adjust thickness of border
+ :width attribute
+	-by default each column is as long as the longest line of text
+	-we can create a set table width 1 of 2 ways
+		-<table width="500"> this way sets width by number of pixels
+		-<table width="80%> this way sets width to % of browser width
+ :cellpadding attribute
+	-creates padding, ie. space around text within each cell of the table
+		-<table cellpadding="10">
+ :cellspacing attribute
+	-creates space between each cell, think thickness of gap between teeth
+	-more spacing is analagous to larger gaps between teeth
+		-<table cellspacing="10">
+
+ rows=<tr></tr>
+ columns=<td></td> and should be nested within <tr></tr> like so:
+  :colspan attribute can alter number of columns a row utilizes
+  -<table>
+    <tr>
+	 <td colspan="3"></td> #this displays a big 3 column wide single row
+	 <td></td>
+    </tr>
+   </table>
+		-this example illustrates a 1 row, 2 column table
+  
+ table headers=<th></th>
+	-think column but centered bolded, great for heading a column dur
+ 
+
+
+
+bold=<strong>text</strong>
+italics=<em>text</em>
+line=<hr />; this notation is a single tag, as we don't require a second closing tag
+linebreak=<br />; also a single tag
+image=<img />
+ :src attribute
+	-points to img file:		<img src="filename.extension"/>
+ :height attribute
+	-adjusts height img:		<img src="" height=""/>
+links=<a> stands for anchor
+ :href attribute
+	-for external sites:		<a href="https://website">clickable name</a>
+	-for internal sites:		<a href="nameoffile.html>clickable name</a>
+	-for page-links:			<a href="#nameofpage-link">clickable name</a>
+	-for email-links:			<a href="mailto:address@host.com">clickable name</a>
+ :name attribute
+	-anchors for page-links:	<a name="nameofpage-link"></a>
+ :tool tips
+	-text disp cursor hovers 	<a title="cursor hover tip text">
+		-useful when combined with a link, ie. tip, describing fxn, etc.
+-->
+
+<!--
+-----------------------------NOTES on DESIGN-
+email-links can be an annoyance for users, as many people may not prefer to have
+OS email client popping in their face after clicking the link.
+	-suggestion: simply list email addresses in plain text, something to consider
+headers <h1-h6> are great for integrating within tables ie. with table headers
+	
+<!--!!!!!! so turns out that page runs w/o this, but apprently there are varied doctypes
+which I believe set the format/stanard we should use in constructing/writing the 
+site, but i need to research this more!!!!!!
+OKAY, TURNS OUT the below doctype is actually the HTML 5 doctype. It's quite simple by 
+comparison with other types.
+-->
+<!DOCTYPE html>
+
+<html>
+<!--The head contains meta data; ie. keywords (search), linked files, java, the title that appears on tabs, etc-->
+<head>
+	<style type="text/css">
+		  
+	
+	</style>
+	<title>PAGE A</title>
+</head>
+<!--The body primarily contains what the user sees on the webpage-->
+<body>
+<!--This is where "Top" page-links point-->
+<a name="top"></a>
+
+<hr />
+<!--This section contains varyied links-->
+<a href="mailto:ducksinmepocket@gmail.com">Contact</a>
+<a href="#heading 2">Heading Two</a>
+<a href="page b.html">Page B</a>
+<a href="#bottom">Bottom</a>
+<a href="scratch.html">Practice area</a>
+<!--End of page links-->
+<hr />
+
+<h1>Heading One</h1>
+<p>first paragraph</p>
+<!--basic separator line-->
+<hr />
+<!--These breaks are creating white space (place holder) for testing page-links-->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<!--
+Obviously heading, but with an embedded anchor for "Heading Two" page-link
+It's a bit harder to read the code here, but benefit being that it acutally
+points to the exact line(location)
+-->
+<h2><a name="heading 2"></a>Heading Two</h2>
+<!--The paragraph tags aren't really necessary here, just a demonstration-->
+<p><strong>second(bold)</strong><em>paragraph(italic)</em>
+<br />This is a line break</p>
+
+<hr />
+<!--
+notice how we have no paragraph tag here yet the appearance to the user
+is identical to the above section
+-->
+what up y'all?
+<br />
+i like <a href="http://google.com/search?q=onions">onions</a>
+<br />
+if you don't know what an onion is, click that link.
+<br /> 
+if you'd rather not click that link, simply scroll down to see what a delicious onion looks like.
+
+<hr />
+<a href="#top">Top<a/>
+<!--Another link-link to Page A-->
+<a href="page a.html">Page A</a>
+<!--Another page-link to bottom of page-->
+<a href="#bottom">Bottom<a/>
+
+<hr />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+if you're still unsure, just place your mouse over the image.
+<img src="juicyonion.jpg" height="320" title="Juicy Onion"/> 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<hr />
+
+<a href="mailto:ducksinmepocket@gmail.com">Contact</a>
+<a href="#heading 2">Heading Two</a>
+<a href="page b.html">Page B</a>
+<a href="#top">Top<a/>
+
+<hr />
+<!--This is where the bottom page-link points to-->
+<a name="bottom"></a>
+</body>
+
+
+
+</html>
